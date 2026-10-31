@@ -5,5 +5,6 @@ import { apiPlugin } from './apiPlugin.js'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: process.env.GITHUB_ACTIONS === 'true' ? '/peer-to-peer/' : '/',
   plugins: [react(), tailwindcss(), apiPlugin()],
 })

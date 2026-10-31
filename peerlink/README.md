@@ -2,6 +2,12 @@
 
 Student Peer Book & Equipment Lending Ledger. Borrow smart. Lend safely. Return on time.
 
+## Website
+
+https://shreya-m-12.github.io/peer-to-peer/
+
+GitHub Pages serves the frontend only. The Vite `/api` endpoints run only during local development, and browser LocalStorage is not shared across devices.
+
 ## Run locally
 
 Requirements: Node.js 20.19+ or 22.12+.

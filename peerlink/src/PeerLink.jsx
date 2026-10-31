@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Link, NavLink, Navigate, Outlet, Route, Routes, useNavigate } from 'react-router-dom'
+import { HashRouter, Link, NavLink, Navigate, Outlet, Route, Routes, useNavigate } from 'react-router-dom'
 import { Activity, ArrowDownToLine, ArrowRight, Bell, BookOpen, Boxes, CalendarDays, Check, CheckCheck, CircleAlert, ClipboardList, Clock3, FileText, Handshake, LayoutDashboard, LogOut, MessageCircle, PackagePlus, Search, ShieldCheck, Sparkles, UserRound, Users, X } from 'lucide-react'
 import { Bar, BarChart, CartesianGrid, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { StoreProvider, useStore } from './store.jsx'
@@ -147,4 +147,4 @@ function Admin() {
 }
 
 function Pages() { return <Routes><Route path="/" element={<Landing />} /><Route path="/login" element={<Auth />} /><Route path="/register" element={<Auth registerMode />} /><Route element={<Guard />}><Route element={<Layout />}><Route path="/dashboard" element={<Dashboard />} /><Route path="/explore" element={<Explore />} /><Route path="/listings" element={<Listings />} /><Route path="/requests" element={<Requests />} /><Route path="/borrowings" element={<Transactions />} /><Route path="/lending" element={<Transactions lending />} /><Route path="/returns" element={<Returns />} /><Route path="/messages" element={<Messages />} /><Route path="/notifications" element={<Notifications />} /><Route path="/reports" element={<Reports />} /><Route path="/profile" element={<Profile />} /><Route path="/admin" element={<Admin />} /></Route></Route><Route path="*" element={<Navigate to="/" replace />} /></Routes> }
-export default function PeerLink() { return <StoreProvider><BrowserRouter><Pages /></BrowserRouter></StoreProvider> }
+export default function PeerLink() { return <StoreProvider><HashRouter><Pages /></HashRouter></StoreProvider> }
